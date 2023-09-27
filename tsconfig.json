@@ -5,7 +5,7 @@
     "lib": ["ES2020", "dom", "dom.iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "noImplicitAny": true,
+    
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -19,7 +19,8 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
