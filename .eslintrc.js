@@ -35,5 +35,7 @@ module.exports = {
     "react/jsx-one-expression-per-line": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-explicit-any": "error",
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
   },
 };
