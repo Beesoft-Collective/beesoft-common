@@ -9,10 +9,7 @@ interface DebouncedFunction<T extends (...args: any[]) => any> {
   flush(): ReturnType<T> | undefined;
 }
 
-export function debounce<T extends (...args: any[]) => void>(
-  func: T,
-  timeout: number
-): DebouncedFunction<T> {
+export function debounce<T extends (...args: unknown[]) => void>(func: T, timeout: number): DebouncedFunction<T> {
   let timer: ReturnType<typeof setTimeout> | null = null;
   //last set of args passed to debounced function
   let lastArgs: Parameters<T> | null = null;
