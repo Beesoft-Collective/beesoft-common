@@ -1,19 +1,19 @@
 //takes a function type T and infers its return type (R). If T is a function, it returns the inferred return type R,
 //otherwise, it defaults to unknown. This type will be used later for defining the return types of the debounced function and the original function.
 
-type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : unknown;
+//type ReturnType<T extends (...args: unknown[]) => unknown> = T extends (...args: unknown[]) => infer R ? R : unknown;
 //type ReturnType<T extends (...args: unknown[]) => any> = T extends (...args: unknown[]) => infer R ? R : unknown;
 
 //interface for debounced function  - 3 methods -  original function, cancel and flush
-interface DebouncedFunction<T extends (...args: unknown[]) => any> {
+interface DebouncedFunction<T extends (...args: unknown[]) => unknown> {
   (...args: Parameters<T>): ReturnType<T> | undefined;
   cancel(): void;
   flush(): ReturnType<T> | undefined;
 }
 
 export function debounce<T extends (...args: unknown[]) => void>(func: T, timeout: number): DebouncedFunction<T> {
+  //let timer: typeof setTimeout | null = null;
   let timer: ReturnType<typeof setTimeout> | null = null;
-
   //last set of args passed to debounced function
   let lastArgs: Parameters<T> | null = null;
   //stores result of last call to debounced fuction
@@ -22,7 +22,7 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
   function debounced(...args: Parameters<T>): ReturnType<T> | undefined {
     // Clear the existing timer, if any
     if (timer !== null) {
-      clearTimeout(timer);
+      clearTimeout(timer!);
     }
     //store current args
     lastArgs = args;
@@ -41,7 +41,7 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
   debounced.cancel = function (): void {
     //if there is a pending call, reset everything
     if (timer !== null) {
-      clearTimeout(timer);
+      clearTimeout(timer!);
       timer = null;
       lastArgs = null;
     }
@@ -50,14 +50,12 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
   debounced.flush = function (): ReturnType<T> | undefined {
     //there is a pending call, invoke it
     if (timer !== null) {
-      clearTimeout(timer);
+      clearTimeout(timer!);
       timer = null;
 
       if (lastArgs !== null) {
         // Use the same conditional type here
-        lastResult = func(...(lastArgs as Parameters<T>)) as ReturnType<T> extends void
-          ? undefined
-          : ReturnType<T>;
+        lastResult = func(...(lastArgs as Parameters<T>)) as ReturnType<T> extends void ? undefined : ReturnType<T>;
         return lastResult;
       }
     }
@@ -67,3 +65,22 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
 
   return debounced;
 }
+
+const debouncedFunction = debounce(function (arg) {
+  console.log(arg);
+}, 200);
+
+debouncedFunction.flush();
+debouncedFunction.cancel(); // Will cancel the delayed invocation
+debouncedFunction.flush();
+debouncedFunction('Call 1'); // Will be delayed
+debouncedFunction.cancel(); // Will cancel the delayed invocation
+debouncedFunction.flush();
+debouncedFunction('Call 2'); // Will cancel the previous and start a new delay
+debouncedFunction.flush();
+debouncedFunction('Call 3'); // Will cancel the previous and start a new delay
+debouncedFunction.flush();
+debouncedFunction('Call 4'); // Will cancel the previous and start a new delay
+debouncedFunction('Call 4.1'); // Will cancel the previous and start a new delay
+//debouncedFunction.cancel(); // Will cancel the delayed invocation
+debouncedFunction('Call 5'); // Will cancel the previous and start a new delay
