@@ -1,9 +1,11 @@
 //takes a function type T and infers its return type (R). If T is a function, it returns the inferred return type R,
 //otherwise, it defaults to unknown. This type will be used later for defining the return types of the debounced function and the original function.
+
 type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : unknown;
+//type ReturnType<T extends (...args: unknown[]) => any> = T extends (...args: unknown[]) => infer R ? R : unknown;
 
 //interface for debounced function  - 3 methods -  original function, cancel and flush
-interface DebouncedFunction<T extends (...args: any[]) => any> {
+interface DebouncedFunction<T extends (...args: unknown[]) => any> {
   (...args: Parameters<T>): ReturnType<T> | undefined;
   cancel(): void;
   flush(): ReturnType<T> | undefined;
@@ -11,6 +13,7 @@ interface DebouncedFunction<T extends (...args: any[]) => any> {
 
 export function debounce<T extends (...args: unknown[]) => void>(func: T, timeout: number): DebouncedFunction<T> {
   let timer: ReturnType<typeof setTimeout> | null = null;
+
   //last set of args passed to debounced function
   let lastArgs: Parameters<T> | null = null;
   //stores result of last call to debounced fuction
