@@ -38,7 +38,6 @@ describe('debounce function', () => {
   });
 
   it('should call function - time elapsed', () => {
-    jest.useFakeTimers();
     const originalFunction = jest.fn();
     const debouncedFunction = debounce(originalFunction, 200);
 
