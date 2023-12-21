@@ -1,9 +1,3 @@
-//takes a function type T and infers its return type (R). If T is a function, it returns the inferred return type R,
-//otherwise, it defaults to unknown. This type will be used later for defining the return types of the debounced function and the original function.
-
-//type ReturnType<T extends (...args: unknown[]) => unknown> = T extends (...args: unknown[]) => infer R ? R : unknown;
-//type ReturnType<T extends (...args: unknown[]) => any> = T extends (...args: unknown[]) => infer R ? R : unknown;
-
 //interface for debounced function  - 3 methods -  original function, cancel and flush
 interface DebouncedFunction<T extends (...args: unknown[]) => unknown> {
   (...args: Parameters<T>): ReturnType<T> | undefined;
@@ -65,22 +59,3 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
 
   return debounced;
 }
-
-const debouncedFunction = debounce(function (arg) {
-  console.log(arg);
-}, 200);
-
-debouncedFunction.flush();
-debouncedFunction.cancel(); // Will cancel the delayed invocation
-debouncedFunction.flush();
-debouncedFunction('Call 1'); // Will be delayed
-debouncedFunction.cancel(); // Will cancel the delayed invocation
-debouncedFunction.flush();
-debouncedFunction('Call 2'); // Will cancel the previous and start a new delay
-debouncedFunction.flush();
-debouncedFunction('Call 3'); // Will cancel the previous and start a new delay
-debouncedFunction.flush();
-debouncedFunction('Call 4'); // Will cancel the previous and start a new delay
-debouncedFunction('Call 4.1'); // Will cancel the previous and start a new delay
-//debouncedFunction.cancel(); // Will cancel the delayed invocation
-debouncedFunction('Call 5'); // Will cancel the previous and start a new delay
