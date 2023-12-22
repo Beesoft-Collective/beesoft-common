@@ -18,6 +18,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
+    "plugin:storybook/recommended"
   ],
   rules: {
     // eslint specific rule changes.
