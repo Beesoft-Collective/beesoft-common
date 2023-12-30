@@ -1,5 +1,5 @@
 //interface for debounced function  - 3 methods -  original function, cancel and flush
-interface DebouncedFunction<T extends (...args: unknown[]) => unknown> {
+export interface DebouncedFunction<T extends (...args: unknown[]) => unknown> {
   (...args: Parameters<T>): ReturnType<T> | undefined;
   cancel(): void;
   flush(): ReturnType<T> | undefined;
