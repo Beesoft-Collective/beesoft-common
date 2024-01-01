@@ -32,7 +32,7 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
     return lastResult;
   }
   // Attach cancel method directly to the debounced function
-  debounced.cancel = function (): void {
+  debounced.cancel = () => {
     //if there is a pending call, reset everything
     if (timer !== null) {
       clearTimeout(timer!);
@@ -41,7 +41,7 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
     }
   };
 
-  debounced.flush = function (): ReturnType<T> | undefined {
+  debounced.flush = (): ReturnType<T> | undefined => {
     //there is a pending call, invoke it
     if (timer !== null) {
       clearTimeout(timer!);

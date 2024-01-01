@@ -1,27 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "dom", "dom.iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    // add Bun type definitions
     "types": ["bun-types"],
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+    // enable latest features
+    "lib": ["esnext"],
+    "module": "esnext",
+    "target": "esnext",
 
-    /* Linting */
+    // if TS 5.x+
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+
+    "jsx": "react-jsx", // support JSX
+    "allowJs": true, // allow importing `.js` from `.ts`
+
+    // best practices
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["./src/**/*", "vite.config.ts"],
+  "exclude": ["node_modules", "dist", "types", "public"],
 }

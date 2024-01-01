@@ -1,5 +1,5 @@
+import { beforeEach, describe, expect, mock, test } from 'bun:test';
 import { debounce, DebouncedFunction } from './debounce.ts';
-import { describe, expect, test, mock, beforeEach } from 'bun:test';
 
 type OriginalFunctionType = (x: unknown) => unknown;
 
