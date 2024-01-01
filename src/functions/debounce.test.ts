@@ -12,7 +12,7 @@ describe('debounce function', () => {
   let debouncedFunction: DebouncedFunction<OriginalFunctionType>;
 
   beforeEach(() => {
-    originalFunction = mock((x) => x);
+    originalFunction = mock((x: unknown) => x);
     debouncedFunction = debounce(originalFunction, 200);
   });
 
