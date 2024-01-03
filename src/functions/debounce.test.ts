@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, mock, test } from 'bun:test';
 import { debounce, DebouncedFunction } from './debounce.ts';
 
-type OriginalFunctionType = (x: unknown) => unknown;
+type OriginalFunctionType = (arg: string) => void;
 
 function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -12,7 +12,9 @@ describe('debounce function', () => {
   let debouncedFunction: DebouncedFunction<OriginalFunctionType>;
 
   beforeEach(() => {
-    originalFunction = mock((x: unknown) => x);
+    originalFunction = mock((x: string) => {
+      console.log('test', x);
+    });
     debouncedFunction = debounce(originalFunction, 200);
   });
 
@@ -47,7 +49,7 @@ describe('debounce function', () => {
     await delay(200);
 
     // Ensure the original function is called
-    expect(originalFunction).toHaveBeenCalledWith('call 1');
+    expect(originalFunction).toHaveBeenNthCalledWith(1, 'call 1');
   });
 
   test('should call LAST function invoked - time elapsed', async () => {
@@ -58,7 +60,7 @@ describe('debounce function', () => {
     await delay(200);
 
     // Ensure the LAST function is called
-    expect(originalFunction).toHaveBeenCalledWith('call 3');
+    expect(originalFunction).toHaveBeenNthCalledWith(1, 'call 3');
   });
 
   test('should NOT call first function if subsequent call made - time elapsed', async () => {
@@ -70,5 +72,6 @@ describe('debounce function', () => {
 
     // Ensure the LAST function is called
     expect(originalFunction).not.toHaveBeenCalledWith('call 1');
+    expect(originalFunction).not.toHaveBeenCalledWith('call 2');
   });
 });

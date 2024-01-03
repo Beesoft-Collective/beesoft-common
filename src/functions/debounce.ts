@@ -1,16 +1,17 @@
-//interface for debounced function  - 3 methods -  original function, cancel and flush
-export interface DebouncedFunction<T extends (...args: unknown[]) => unknown> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface DebouncedFunction<T extends (...args: any[]) => any> {
   (...args: Parameters<T>): ReturnType<T> | undefined;
   cancel(): void;
   flush(): ReturnType<T> | undefined;
 }
 
-export function debounce<T extends (...args: unknown[]) => void>(func: T, timeout: number): DebouncedFunction<T> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function debounce<T extends (...args: any[]) => any>(func: T, timeout: number): DebouncedFunction<T> {
   //let timer: typeof setTimeout | null = null;
   let timer: ReturnType<typeof setTimeout> | null = null;
   //last set of args passed to debounced function
   let lastArgs: Parameters<T> | null = null;
-  //stores result of last call to debounced fuction
+  //stores result of last call to debounced function
   let lastResult: ReturnType<T> | undefined = undefined;
 
   function debounced(...args: Parameters<T>): ReturnType<T> | undefined {
@@ -31,6 +32,7 @@ export function debounce<T extends (...args: unknown[]) => void>(func: T, timeou
 
     return lastResult;
   }
+
   // Attach cancel method directly to the debounced function
   debounced.cancel = () => {
     //if there is a pending call, reset everything
