@@ -1,6 +1,6 @@
 import { DependencyList, useRef } from 'react';
 import deepEquals from 'fast-deep-equal';
-import { cloneDeep } from '../functions/clone-deep.ts';
+import { cloneDeep } from '../functions/clone-deep/clone-deep.ts';
 
 const arraysAreDifferent = (oldArray: ReadonlyArray<unknown>, newArray: ReadonlyArray<unknown>): boolean => {
   for (let i = oldArray.length; i-- !== 0; ) {

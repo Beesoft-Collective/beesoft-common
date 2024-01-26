@@ -1,7 +1,7 @@
-import { isDate } from '../type-guards/is-date.ts';
-import { isFunction } from '../type-guards/is-function.ts';
-import { isObject } from '../type-guards/is-object.ts';
-import { isPrimitive } from '../type-guards/is-primitive.ts';
+import { isDate } from '../../type-guards/is-date.ts';
+import { isFunction } from '../../type-guards/is-function.ts';
+import { isObject } from '../../type-guards/is-object.ts';
+import { isPrimitive } from '../../type-guards/is-primitive.ts';
 import { copyArray } from './copy-array.ts';
 
 const copyObject = (item: Record<string, unknown>) => {

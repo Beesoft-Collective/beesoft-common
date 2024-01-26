@@ -1,8 +1,8 @@
-import { FunctionType, Primitive } from '../global-types.ts';
-import { isDateArray } from '../type-guards/is-date.ts';
-import { isFunctionArray } from '../type-guards/is-function.ts';
-import { isObjectArray } from '../type-guards/is-object.ts';
-import { isPrimitiveArray } from '../type-guards/is-primitive.ts';
+import { FunctionType, Primitive } from '../../global-types.ts';
+import { isDateArray } from '../../type-guards/is-date.ts';
+import { isFunctionArray } from '../../type-guards/is-function.ts';
+import { isObjectArray } from '../../type-guards/is-object.ts';
+import { isPrimitiveArray } from '../../type-guards/is-primitive.ts';
 import { copyObject } from './copy-object.ts';
 
 const copyPrimitiveOrFunctionArray = (source: Array<Primitive | FunctionType>) => {

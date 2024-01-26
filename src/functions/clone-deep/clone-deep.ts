@@ -1,4 +1,4 @@
-import { isObject } from '../type-guards/is-object.ts';
+import { isObject } from '../../type-guards/is-object.ts';
 import { copyArray } from './copy-array.ts';
 import { copyObject } from './copy-object.ts';
 
