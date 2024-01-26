@@ -3,6 +3,10 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && rimraf types && bunx vite build",
