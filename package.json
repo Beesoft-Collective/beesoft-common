@@ -7,6 +7,9 @@
     "dist",
     "types"
   ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && rimraf types && bunx vite build",
