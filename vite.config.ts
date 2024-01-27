@@ -17,11 +17,20 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'BeeSoftComponents',
+      name: 'BeeSoftCommon',
       formats: ['es', 'umd'],
       fileName: (format) => `index.${format}.js`,
     },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
+    },
     minify: 'esbuild',
-    sourcemap: false,
+    sourcemap: true,
   },
 });
