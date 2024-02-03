@@ -45,6 +45,12 @@ const useStateInitial = <T>(initialState: T) => {
   return [state, dispatcher] as const;
 };
 
+/**
+ * A hook that will tell the user if the current version of the state and ref variables are the initial version or not.
+ * Unlike `setState` this version requires an initial value be set.
+ * @param {T} initialState
+ * @returns {readonly [InitialState<T>, <T>(value: ((<T>(prevState: T) => T) | T)) => void, React.MutableRefObject<InitialState<T>>]}
+ */
 const useStateRefInitial = <T>(initialState: T) => {
   const [state, setState] = useStateInitial(initialState);
   const ref = useRef<InitialState<T>>({
@@ -52,7 +58,7 @@ const useStateRefInitial = <T>(initialState: T) => {
     initial: true,
   });
 
-  if (ref.current !== state.value) ref.current = state;
+  if (ref.current !== state) ref.current = state;
 
   return [state, setState, ref] as const;
 };
