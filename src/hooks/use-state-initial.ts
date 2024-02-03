@@ -45,4 +45,16 @@ const useStateInitial = <T>(initialState: T) => {
   return [state, dispatcher] as const;
 };
 
-export { useStateInitial };
+const useStateRefInitial = <T>(initialState: T) => {
+  const [state, setState] = useStateInitial(initialState);
+  const ref = useRef<InitialState<T>>({
+    value: initialState,
+    initial: true,
+  });
+
+  if (ref.current !== state.value) ref.current = state;
+
+  return [state, setState, ref] as const;
+};
+
+export { useStateInitial, useStateRefInitial };
