@@ -7,7 +7,7 @@ const isStateFunction = <S>(setStateAction: SetStateAction<S>): setStateAction i
  * Wraps the actual state value in an object with an initial property that determines if this version of the state is
  * the initial version or not.
  */
-interface InitialState<T> {
+export interface InitialState<T> {
   value: T;
   initial: boolean;
 }

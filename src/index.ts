@@ -6,10 +6,11 @@ import { useStateInitial, useStateRefInitial } from './hooks/use-state-initial.t
 import { useStateRef } from './hooks/use-state-ref.ts';
 
 // types
+import { InitialState } from './hooks/use-state-initial.ts';
 import { JsonItem, JsonData } from './custom-types/json-data.ts';
 import { MakeRequired } from './custom-types/make-required.ts';
 import { TypeOrArray } from './custom-types/type-or-array.ts';
 
 export { cloneDeep, debounce, deepEquals, useDeepMemo, useStateInitial, useStateRefInitial, useStateRef };
 
-export type { JsonData, JsonItem, MakeRequired, TypeOrArray };
+export type { InitialState, JsonData, JsonItem, MakeRequired, TypeOrArray };
