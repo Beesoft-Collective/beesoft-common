@@ -10,7 +10,7 @@ const usePropertyChanged = <T>(property: T): PropertyChangedReturn<T> => {
   const lastValue = useRef<T>();
   let changed = false;
 
-  if (lastValue.current) {
+  if (lastValue.current !== undefined) {
     changed = deepEquals(lastValue.current, property);
 
     if (changed) {
