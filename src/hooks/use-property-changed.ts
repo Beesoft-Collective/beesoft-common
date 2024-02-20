@@ -1,5 +1,5 @@
 import deepEquals from 'fast-deep-equal';
-import { useRef } from 'react';
+import { useId, useRef } from 'react';
 
 export interface PropertyChangedReturn<T> {
   changed: boolean;
@@ -8,6 +8,7 @@ export interface PropertyChangedReturn<T> {
 
 const usePropertyChanged = <T>(property: T): PropertyChangedReturn<T> => {
   const lastValue = useRef<T>();
+  const id = useId();
   let changed = false;
 
   if (lastValue.current !== undefined) {
@@ -18,7 +19,7 @@ const usePropertyChanged = <T>(property: T): PropertyChangedReturn<T> => {
     changed,
     previousValue: lastValue.current,
   };
-  console.log('usePropertyChanged changed', changed, 'property value', property, 'return value', returnValue);
+  console.log('id', id, 'usePropertyChanged changed', changed, 'property value', property, 'return value', returnValue);
   lastValue.current = property;
 
   return returnValue;
