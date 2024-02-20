@@ -18,7 +18,7 @@ const usePropertyChanged = <T>(property: T): PropertyChangedReturn<T> => {
     changed,
     previousValue: lastValue.current,
   };
-
+  console.log('usePropertyChanged changed', changed, 'property value', property, 'return value', returnValue);
   lastValue.current = property;
 
   return returnValue;
