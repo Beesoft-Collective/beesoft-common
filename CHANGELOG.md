@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.7-6] - 2024-04-13
+
 ## Changed
 
 - Opting for correctness over performance for now.
@@ -35,7 +37,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Commented out the not equals dependency comparison
 
-[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.7-5...develop
+[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.7-6...develop
+[0.1.7-6]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-6
 [0.1.7-5]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-5
 [0.1.7-4]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-4
 [0.1.7-3]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-3
