@@ -32,7 +32,7 @@ const copyObjectArray = (source: Array<Record<string, unknown>>) => {
   const copy: JsonData = [];
 
   for (let index = 0, length = source.length; index < length; index++) {
-    copy[index] = copyObject(source[index]);
+    copy.push(copyObject(source[index]));
   }
   console.log('copied array', copy);
   return copy;
