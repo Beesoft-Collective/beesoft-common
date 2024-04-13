@@ -29,10 +29,9 @@ const copyDateArray = (source: Array<Date>) => {
 };
 
 const copyObjectArray = (source: Array<Record<string, unknown>>) => {
-  let index = source.length;
-  const copy: JsonData = new Array(index);
+  const copy: JsonData = [];
 
-  for (; index-- !== 0; ) {
+  for (let index = 0, length = source.length; index < length; index++) {
     copy[index] = copyObject(source[index]);
   }
   console.log('copied array', copy);
