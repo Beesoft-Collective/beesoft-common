@@ -4,7 +4,7 @@ import { cloneDeep } from '../functions/clone-deep/clone-deep.ts';
 
 const arraysAreDifferent = (oldArray: ReadonlyArray<unknown>, newArray: ReadonlyArray<unknown>): boolean => {
   for (let i = oldArray.length; i-- !== 0; ) {
-    if (oldArray[i] !== newArray[i] && !deepEquals(oldArray[i], newArray[i])) {
+    if (/*oldArray[i] !== newArray[i] &&*/ !deepEquals(oldArray[i], newArray[i])) {
       return true;
     }
   }
