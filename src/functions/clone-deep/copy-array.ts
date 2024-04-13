@@ -35,7 +35,7 @@ const copyObjectArray = (source: Array<Record<string, unknown>>) => {
   for (; index-- !== 0; ) {
     copy[index] = copyObject(source[index]);
   }
-
+  console.log('copied array', copy);
   return copy;
 };
 

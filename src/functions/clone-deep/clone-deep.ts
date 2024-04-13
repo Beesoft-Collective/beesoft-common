@@ -8,6 +8,7 @@ const cloneDeep = <T>(item: T): T => {
   }
 
   if (Array.isArray(item)) {
+    console.log('copying array');
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     return copyArray(item);
