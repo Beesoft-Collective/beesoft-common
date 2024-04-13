@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.7-4] - 2024-04-13
+
 ## Changed
 
 - Changing the way the cloneDeep function works to try and fix this issue.
@@ -23,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Commented out the not equals dependency comparison
 
-[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.7-3...develop
+[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.7-4...develop
+[0.1.7-4]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-4
 [0.1.7-3]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-3
 [0.1.7-2]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-2
