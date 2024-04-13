@@ -1,3 +1,4 @@
+import { JsonData } from '../../custom-types/json-data.ts';
 import { FunctionType, Primitive } from '../../global-types.ts';
 import { isDateArray } from '../../type-guards/is-date.ts';
 import { isFunctionArray } from '../../type-guards/is-function.ts';
@@ -29,7 +30,7 @@ const copyDateArray = (source: Array<Date>) => {
 
 const copyObjectArray = (source: Array<Record<string, unknown>>) => {
   let index = source.length;
-  const copy = new Array<Record<string, unknown>>(index);
+  const copy: JsonData = new Array(index);
 
   for (; index-- !== 0; ) {
     copy[index] = copyObject(source[index]);

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Changing the way the cloneDeep function works to try and fix this issue.
+
 ## [0.1.7-3] - 2024-04-13
 
 ## Changed
