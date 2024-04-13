@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Added some console.log's to see why the comparison isn't working.
+
 ## [0.1.7-2] - 2024-04-13
 
 ## Changed
