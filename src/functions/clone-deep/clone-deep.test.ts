@@ -49,6 +49,27 @@ describe('cloneDeep', () => {
     expect(clone).toEqual(array);
   });
 
+  test('array of array clone', () => {
+    const arrayOfArray = [
+      [
+        {
+          stringProp: 'test',
+          numProp: 1,
+          boolProp: true,
+        },
+        {
+          stringProp: 'test2',
+          numProp: 2,
+          boolProp: false,
+        },
+      ],
+    ];
+
+    const clone = cloneDeep(arrayOfArray);
+
+    expect(clone).toEqual(arrayOfArray);
+  });
+
   test('complex object clone', () => {
     const object = {
       stringProp: 'test',

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- This seems to fix the issue array clone issue.
+
 ## [0.1.7-8] - 2024-04-13
 
 ## Changed
