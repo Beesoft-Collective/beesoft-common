@@ -12,7 +12,7 @@ const copyObject = (item: Record<string, unknown>) => {
   const copy: Record<string, unknown> = {};
   const keys = Object.keys(item);
 
-  for (let i = keys.length; i-- !== 0; ) {
+  for (let i = 0, length = keys.length; i < length; i++) {
     const key = keys[i];
     const property = item[key];
     if (isPrimitive(property) || isFunction(property)) {
