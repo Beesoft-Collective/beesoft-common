@@ -4,10 +4,7 @@ import { cloneDeep } from '../functions/clone-deep/clone-deep.ts';
 
 const arraysAreDifferent = (oldArray: ReadonlyArray<unknown>, newArray: ReadonlyArray<unknown>): boolean => {
   for (let i = oldArray.length; i-- !== 0; ) {
-    console.log('old item', oldArray[i], 'new item', newArray[i]);
-    const isEqual = deepEquals(oldArray[i], newArray[i]);
-    console.log('is equal', isEqual);
-    if (/*oldArray[i] !== newArray[i] &&*/ !isEqual) {
+    if (!deepEquals(oldArray[i], newArray[i])) {
       return true;
     }
   }
