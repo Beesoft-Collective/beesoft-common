@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Created the new `useDeepValueChanged` hook that will fire when ever a monitored value changes.
+
 ## [0.1.7] - 2024-04-15
 
 ## Fixed
