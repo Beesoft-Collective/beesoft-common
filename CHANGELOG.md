@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8-1] - 2024-04-25
+
 ## Changed
 
 - Fixed previous issues with the `useDeepEffect` hook.
@@ -71,7 +73,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Commented out the not equals dependency comparison
 
-[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.8-0...develop
+[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.8-1...develop
+[0.1.8-1]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.8-1
 [0.1.8-0]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.8-0
 [0.1.7]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7
 [0.1.7-9]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7-9
