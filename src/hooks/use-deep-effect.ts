@@ -1,4 +1,5 @@
 import { DependencyList, useEffect, useRef, useState } from 'react';
+import { cloneDeep } from '../functions/clone-deep/clone-deep.ts';
 import { arraysAreDifferent } from '../functions/common.ts';
 
 const useDeepEffect = (effect: () => void | (() => void), dependencies: DependencyList) => {
@@ -8,6 +9,7 @@ const useDeepEffect = (effect: () => void | (() => void), dependencies: Dependen
     previousDependencies.current !== undefined && arraysAreDifferent(previousDependencies.current, dependencies);
 
   if (!previousDependencies.current || isChanged) {
+    previousDependencies.current = cloneDeep(dependencies);
     setEffectTrigger(!effectTrigger);
   }
 
