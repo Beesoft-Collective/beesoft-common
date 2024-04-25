@@ -7,11 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Fixed previous issues with the `useDeepEffect` hook.
+
 ## [0.1.8-0] - 2024-04-21
 
 ## Added
 
-- Created the new `useDeepValueChanged` hook that will fire when ever a monitored value changes.
+- Created the new `useDeepEffect` hook that will fire when ever a monitored value changes.
 
 ## [0.1.7] - 2024-04-15
 
