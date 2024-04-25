@@ -2,6 +2,7 @@ import { cloneDeep } from './functions/clone-deep/clone-deep.ts';
 import { debounce } from './functions/debounce/debounce.ts';
 import deepEquals from 'fast-deep-equal';
 import { useDeepMemo } from './hooks/use-deep-memo.ts';
+import { useDeepEffect } from './hooks/use-deep-effect.ts';
 import { usePropertyChanged } from './hooks/use-property-changed.ts';
 import { useStateInitial, useStateRefInitial } from './hooks/use-state-initial.ts';
 import { useStateRef } from './hooks/use-state-ref.ts';
@@ -17,6 +18,7 @@ export {
   debounce,
   deepEquals,
   useDeepMemo,
+  useDeepEffect,
   usePropertyChanged,
   useStateInitial,
   useStateRefInitial,

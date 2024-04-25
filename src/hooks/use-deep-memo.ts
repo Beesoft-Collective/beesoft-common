@@ -1,16 +1,6 @@
 import { DependencyList, useRef } from 'react';
-import deepEquals from 'fast-deep-equal';
 import { cloneDeep } from '../functions/clone-deep/clone-deep.ts';
-
-const arraysAreDifferent = (oldArray: ReadonlyArray<unknown>, newArray: ReadonlyArray<unknown>): boolean => {
-  for (let i = oldArray.length; i-- !== 0; ) {
-    if (!deepEquals(oldArray[i], newArray[i])) {
-      return true;
-    }
-  }
-
-  return false;
-};
+import { arraysAreDifferent } from '../functions/common.ts';
 
 const useDeepMemo = <T>(factory: () => T, dependencies: DependencyList): T => {
   const _memo = useRef<[] | [DependencyList] | [DependencyList, T]>([]);
