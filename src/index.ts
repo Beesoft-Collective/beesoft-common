@@ -12,6 +12,7 @@ import { InitialState } from './hooks/use-state-initial.ts';
 import { JsonItem, JsonData } from './custom-types/json-data.ts';
 import { MakeRequired } from './custom-types/make-required.ts';
 import { TypeOrArray } from './custom-types/type-or-array.ts';
+import { ReplacePropertyType } from './custom-types/replace-property-type.ts';
 
 export {
   cloneDeep,
@@ -25,4 +26,4 @@ export {
   useStateRef,
 };
 
-export type { InitialState, JsonData, JsonItem, MakeRequired, TypeOrArray };
+export type { InitialState, JsonData, JsonItem, MakeRequired, ReplacePropertyType, TypeOrArray };
