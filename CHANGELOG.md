@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Added a new `ReplaceProperty` type that will allow a property in a type to be replaced by another.
+
 ## [0.1.8] - 2024-04-25
 
 ## Added
