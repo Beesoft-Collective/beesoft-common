@@ -8,6 +8,7 @@ import { useStateInitial, useStateRefInitial } from './hooks/use-state-initial.t
 import { useStateRef } from './hooks/use-state-ref.ts';
 
 // types
+import { DebouncedFunction } from './functions/debounce/debounce.ts';
 import { InitialState } from './hooks/use-state-initial.ts';
 import { JsonItem, JsonData } from './custom-types/json-data.ts';
 import { MakeRequired } from './custom-types/make-required.ts';
@@ -26,4 +27,4 @@ export {
   useStateRef,
 };
 
-export type { InitialState, JsonData, JsonItem, MakeRequired, ReplacePropertyType, TypeOrArray };
+export type { DebouncedFunction, InitialState, JsonData, JsonItem, MakeRequired, ReplacePropertyType, TypeOrArray };
