@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.10] - 2024-06-15
+
 ## Added
 
 - Exported the `DebouncedFunction` type, so it can be used in beesoft-components.
@@ -29,8 +31,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Found issue where `useDeepMemo` was always running when one of the dependencies was an array. Found the issue was in the `cloneDeep` function; the `copyArray` function was not handling an array that contained another array.
 
-[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.9...develop
+[unreleased]: https://github.com/Beehive-Software-Consultants/beesoft-common/compare/v0.1.10...develop
 [0.1.7]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7
 
+[0.1.10]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.10
 [0.1.9]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.9
 [0.1.8]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.8
