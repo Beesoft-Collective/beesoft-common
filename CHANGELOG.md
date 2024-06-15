@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Exported the `DebouncedFunction` type, so it can be used in beesoft-components.
+
 ## [0.1.9] - 2024-06-03
 
 ## Added
