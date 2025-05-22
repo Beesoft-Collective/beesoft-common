@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Moved the `forceAssert` function to the common library, so it can be used by any beesoft library.
+
 ## [0.1.11] - 2025-05-17
 
 ## Added
