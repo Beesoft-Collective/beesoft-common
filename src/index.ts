@@ -10,6 +10,7 @@ import { useStateRef } from './hooks/use-state-ref.ts';
 
 // types
 import { DebouncedFunction } from './functions/debounce/debounce.ts';
+import { FormInputControl, FormInputControlData } from './custom-types/form-control.interface.ts';
 import { InitialState } from './hooks/use-state-initial.ts';
 import { JsonItem, JsonData } from './custom-types/json-data.ts';
 import { MakeOptional } from './custom-types/make-optional.ts';
@@ -32,6 +33,8 @@ export {
 
 export type {
   DebouncedFunction,
+  FormInputControl,
+  FormInputControlData,
   InitialState,
   JsonData,
   JsonItem,
