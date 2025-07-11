@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Previous typings change did not return the type of the callback which was still causing errors.
+
 ## [0.1.15] - 2025-07-11
 
 ## Changed

@@ -1,9 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 import { useInsertionEffect, useRef } from 'react';
-
-/**
- * The callback can be a function of any number of arguments with any return type.
- */
-type UnknownFunction = (...args: Array<never>) => never;
 
 type CallbackFunction<P, R> = (...args: Array<P>) => R;
 
@@ -17,19 +13,19 @@ const useEventPreMountCallbackError = () => {
  * https://github.com/reactjs/rfcs/blob/useevent/text/0000-useevent.md.
  * @param callback - The actual function to run.
  */
-const useEvent = <F extends UnknownFunction, P extends Array<never> = Parameters<F>, R = ReturnType<F>>(
+const useEvent = <F extends (...args: Array<any>) => any, P extends Array<any> = Parameters<F>, R = ReturnType<F>>(
   callback: CallbackFunction<P, R>
 ) => {
   // maintains the actual code to run...this is updated on every render
-  const latestCallback = useRef<CallbackFunction<P, R>>(useEventPreMountCallbackError as never);
+  const latestCallback = useRef<CallbackFunction<P, R>>(useEventPreMountCallbackError as any);
   useInsertionEffect(() => {
     latestCallback.current = callback;
   }, [callback]);
 
   // creates the stable function that does not change on each render
-  const stableCallback = useRef<F>(null as never);
+  const stableCallback = useRef<CallbackFunction<P, R>>(null as any);
   if (!stableCallback.current) {
-    stableCallback.current = function (this: never) {
+    stableCallback.current = function (this: any) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // eslint-disable-next-line prefer-rest-params
