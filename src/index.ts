@@ -4,6 +4,7 @@ import deepEquals from 'fast-deep-equal';
 import { forceAssert } from './functions/common.ts';
 import { useDeepMemo } from './hooks/use-deep-memo.ts';
 import { useDeepEffect } from './hooks/use-deep-effect.ts';
+import { useEvent } from './hooks/use-event.ts';
 import { usePropertyChanged } from './hooks/use-property-changed.ts';
 import { useStateInitial, useStateRefInitial } from './hooks/use-state-initial.ts';
 import { useStateRef } from './hooks/use-state-ref.ts';
@@ -25,6 +26,7 @@ export {
   forceAssert,
   useDeepMemo,
   useDeepEffect,
+  useEvent,
   usePropertyChanged,
   useStateInitial,
   useStateRefInitial,
