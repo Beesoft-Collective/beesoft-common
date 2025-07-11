@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Created a `useEvent` hook that will maintain a stable function that will always have the latest version of any state variables or component properties.
+
 ## [0.1.13] - 2025-06-13
 
 ## Added
