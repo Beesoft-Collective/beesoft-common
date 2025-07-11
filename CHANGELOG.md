@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Changed the typings of the `useEvent` hook since it was returning a type of any and causing typing errors in user code.
+
 ## [0.1.14] - 2025-07-11
 
 ## Added
