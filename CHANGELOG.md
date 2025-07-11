@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Got `useEvent` working correctly.
+
+## Added
+
+- Created a `useEventType` function to support wrapped function types; this will support types like throttle and debounce functions.
+
 ## [0.1.16] - 2025-07-11
 
 ## Changed
