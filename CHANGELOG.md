@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.18] - 2025-08-09
+
 ## Changed
 
 - Added a `defaultValue` property; this will be used to set the default value for a control. This is useful for form libraries also.
@@ -81,9 +83,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Found issue where `useDeepMemo` was always running when one of the dependencies was an array. Found the issue was in the `cloneDeep` function; the `copyArray` function was not handling an array that contained another array.
 
-[unreleased]: https://github.com/Beesoft-Collective/beesoft-common/compare/v0.1.17...develop
+[unreleased]: https://github.com/Beesoft-Collective/beesoft-common/compare/v0.1.18...develop
 [0.1.7]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7
 
+[0.1.18]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.18
 [0.1.17]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.17
 [0.1.16]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.16
 [0.1.15]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.15
