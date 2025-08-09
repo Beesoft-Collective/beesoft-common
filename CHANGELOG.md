@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Added a `defaultValue` property; this will be used to set the default value for a control. This is useful for form libraries also.
+
 ## [0.1.17] - 2025-07-11
 
 ## Changed

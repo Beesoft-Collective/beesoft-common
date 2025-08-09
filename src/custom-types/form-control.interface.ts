@@ -6,6 +6,7 @@ export interface FormInputControl<V = unknown, C = undefined> {
   label?: string;
   name?: string;
   value?: V;
+  defaultValue?: V;
   readOnly?: boolean;
   placeholder?: string;
   onFocus?: (event: FocusEvent) => void;
