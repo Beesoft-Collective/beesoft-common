@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.19] - 2025-12-01
+
 ## Changed
 
 - Added an `onError` event to allow the developer to be notified when an error occurs because of the users action.
@@ -87,9 +89,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Found issue where `useDeepMemo` was always running when one of the dependencies was an array. Found the issue was in the `cloneDeep` function; the `copyArray` function was not handling an array that contained another array.
 
-[unreleased]: https://github.com/Beesoft-Collective/beesoft-common/compare/v0.1.18...develop
+[unreleased]: https://github.com/Beesoft-Collective/beesoft-common/compare/v0.1.19...develop
 [0.1.7]: https://github.com/Beehive-Software-Consultants/beesoft-common/releases/tag/v0.1.7
 
+[0.1.19]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.19
 [0.1.18]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.18
 [0.1.17]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.17
 [0.1.16]: https://github.com/Beesoft-Collective/beesoft-common/releases/tag/v0.1.16
