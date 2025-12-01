@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Added an `onError` event to allow the developer to be notified when an error occurs because of the users action.
+
 ## [0.1.18] - 2025-08-09
 
 ## Changed
