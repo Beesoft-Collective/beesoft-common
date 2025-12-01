@@ -13,6 +13,7 @@ export interface FormInputControl<V = unknown, C = undefined> {
   onBlur?: (event: FocusEvent) => void;
   onInput?: (event: React.FormEvent) => void;
   onChange?: (value?: C extends undefined ? V : C) => void;
+  onError?: (errorValue?: V) => void;
   className?: string;
 }
 
