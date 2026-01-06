@@ -7,7 +7,7 @@ export interface PropertyChangedReturn<T> {
 }
 
 const usePropertyChanged = <T>(property: T): PropertyChangedReturn<T> => {
-  const lastValue = useRef<T>();
+  const lastValue = useRef<T>(undefined);
   let changed = false;
 
   if (lastValue.current !== undefined) {
