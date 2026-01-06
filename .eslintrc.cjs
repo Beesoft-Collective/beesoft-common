@@ -1,40 +1,40 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: "module", // allows for use of imports
+    sourceType: 'module', // allows for use of imports
     ecmaFeatures: {
       jsx: true, // Allows for the parsing of JSX
     },
   },
   settings: {
     react: {
-      version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
   },
   extends: [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended",
-    "prettier",
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
   ],
   rules: {
     // eslint specific rule changes.
-    "prettier/prettier": "warn",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "off",
-    "react/jsx-filename-extension": [
+    'prettier/prettier': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'off',
+    'react/jsx-filename-extension': [
       1,
       {
-        extensions: [".tsx"],
+        extensions: ['.tsx'],
       },
     ],
-    "import/prefer-default-export": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "react/jsx-one-expression-per-line": "off",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-explicit-any": "error",
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-explicit-any': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
   },
