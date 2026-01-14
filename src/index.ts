@@ -1,6 +1,7 @@
 import { cloneDeep } from './functions/clone-deep/clone-deep.ts';
 import { debounce } from './functions/debounce/debounce.ts';
 import deepEquals from 'fast-deep-equal';
+import { fileToBase64 } from "./functions/file-to-base64/file-to-base64.ts";
 import { forceAssert } from './functions/common.ts';
 import { useDeepMemo } from './hooks/use-deep-memo.ts';
 import { useDeepEffect } from './hooks/use-deep-effect.ts';
@@ -23,6 +24,7 @@ export {
   cloneDeep,
   debounce,
   deepEquals,
+  fileToBase64,
   forceAssert,
   useDeepMemo,
   useDeepEffect,
